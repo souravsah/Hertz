@@ -18,8 +18,14 @@ const Navbar = () => {
   const handleClick = () =>{
   navigate('/signup')    
   }
+  const handleWishlist = () =>{
+    navigate('/wishlist')
+  }
   const handleLogout = () =>{
     dispatch(logout())
+  }
+  const handleCart = () =>{
+    navigate('/cart')
   }
   return (
     <Navbarcss>
@@ -51,10 +57,10 @@ const Navbar = () => {
           }
           
         </li>
-        <li>
+        <li onClick={handleWishlist}>
           <AiFillHeart/>
         </li>
-        <li>
+        <li onClick={handleCart}>
           <BsFillBagCheckFill/>
         </li>
         </ul>

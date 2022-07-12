@@ -2,12 +2,13 @@ import React,{useEffect} from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import {getAdddata} from './../../../redux/HomePage/HomePage.action'
+import {getAdddata, getNewArrivalsProducts} from './../../../redux/HomePage/HomePage.action'
 import { useDispatch, useSelector } from "react-redux";
 const SliderImage = () => {
   let dispatch = useDispatch();
   useEffect(()=>{
     dispatch(getAdddata())
+    dispatch(getNewArrivalsProducts())
   },[])
     
   let Addata = useSelector((state)=>state.HomePageReducer.addData.data) || []

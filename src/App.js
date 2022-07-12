@@ -14,6 +14,8 @@ import LoginPage from './pages/LoginPage/LoginPage';
 import SignupPage from './pages/SignupPage/SignupPage';
 import Forgotpassword from './core/ForgotPassword/Forgotpassword';
 import Forgotpasswordpage from './pages/ForgotPasswordPage.jsx/Forgotpasswordpage';
+import Cart from './pages/Cart/Cart';
+import Wishlist from './pages/Wishlist/Wishlist';
 
 const App = () => {
   return (
@@ -26,7 +28,8 @@ const App = () => {
       <Route  path="/login" element={<LoginPage/>}/>
       <Route  path="/signup" element={<SignupPage/>}/>
       <Route  path="/forgotpassword" element={<Forgotpasswordpage/>}/>
-      <Route />
+      <Route  path="/cart" element={<Cart/>}/>
+      <Route path="/wishlist" element={<Wishlist/>}/>
       </Routes>
       </BrowserRouter>
     </Fragment>    
