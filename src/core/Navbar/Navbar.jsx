@@ -23,6 +23,8 @@ const Navbar = () => {
   }
   const handleLogout = () =>{
     dispatch(logout())
+    setIcon(localStorage.getItem('jwt'))
+    alert('Logged Out Successfully...')
   }
   const handleCart = () =>{
     navigate('/cart')
@@ -53,7 +55,7 @@ const Navbar = () => {
         <li >
           
           {
-            localStorage.getItem('jwt')?<span><FiLogOut onClick={handleLogout}/></span>:<span> <CgProfile onClick={handleClick} /></span>
+            icon?<span><FiLogOut onClick={handleLogout}/></span>:<span> <CgProfile onClick={handleClick} /></span>
           }
           
         </li>

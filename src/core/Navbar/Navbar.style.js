@@ -48,7 +48,14 @@ export const List = styled.ul`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
+    li{
+        padding:9px 11px;
+        border-radius:10px 0 10px 0;
+    }
+    li:hover{
+        cursor:pointer;
+        background-color:#ccc;
+    }
     @media(max-width:964px){
     height: 20rem;
     display: ${({toggle})=>toggle?"flex":"none"};;
@@ -64,6 +71,9 @@ export const List = styled.ul`
 
         z-index:99;
     }
+    // li:hover{
+    //     background-color:#ccc;
+    // }
     }
 `
 
@@ -108,6 +118,9 @@ display: grid;
 grid-template-columns: repeat(3, 1fr);
 align-items: center;
 justify-content: flex-end;
+}
+li{
+    cursor:pointer;
 }
 @media(max-width:964px){
     grid-row: 1/2;
