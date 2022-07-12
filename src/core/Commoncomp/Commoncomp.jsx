@@ -16,9 +16,9 @@ console.log(text);
 <Commoncompcss>
 {data.filter((i,id)=>id<=20).map((item,idx)=>
       // <img src={`${item.addImageLink}`} alt="" />
-      <Itembox data={item}/>
+      <Itembox data={item} text={"ADD TO CART"}/>
      )}
-    </Commoncompcss >
+    </Commoncompcss>
     </Heading>
     
   )
