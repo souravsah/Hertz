@@ -21,6 +21,22 @@ const Navbar = () => {
   const handleWishlist = () =>{
     navigate('/wishlist')
   }
+  const handleList = (e) =>{
+    if(e.target.textContent==="MEN"){
+      // console.log("MEN")
+      navigate('/shop/men')
+    }else if(e.target.textContent==="WOMEN"){
+    // console.log("WOMEN");
+    navigate('/shop/women')
+
+    }else if(e.target.textContent==="KIDS"){
+      // console.log("KIDS");
+      navigate('/shop/kids')
+    }else{
+      navigate('/shop/beauty')
+      // console.log("BEAUTY");
+    }
+  }
   const handleLogout = () =>{
     dispatch(logout())
     setIcon(localStorage.getItem('jwt'))
@@ -37,8 +53,10 @@ const Navbar = () => {
         <GiHamburgerMenu/>
       </Hamburger>
       <First >
-        <List toggle={toggle}>
-          <li>MEN</li>
+        <List toggle={toggle} onClick={(e)=>{
+          handleList(e)
+        }}>
+          <li >MEN</li>
           <li>WOMEN</li>
           <li>KIDS</li>
           <li>BEAUTY</li>
