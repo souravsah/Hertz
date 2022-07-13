@@ -1,8 +1,9 @@
 import React from 'react'
+import { Footercss } from './Footer.style'
 
 const Footer = () => {
   return (
-    <div>
+    <Footercss>
         <h3>
             <span>
             {new Date().getFullYear()}
@@ -17,7 +18,7 @@ const Footer = () => {
         <h3>
             Privacy & Terms 
         </h3>
-    </div>
+    </Footercss>
   )
 }
 

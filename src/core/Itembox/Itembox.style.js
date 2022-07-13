@@ -18,6 +18,11 @@ div:nth-child(2){
 `
 export const Cart = styled.h3`
 position:absolute;
+width:90px;
+display:flex;
+justify-content:space-between;
+height:40px;
+
 bottom:16px;
 padding:10px 12px;
 background-color:#ccc;
@@ -25,7 +30,10 @@ background-color:#ccc;
 left:50%;
 transform:translate(-50%,0);
 z-index:1;
-curser:pointer;
+span:hover{
+    cursor:pointer;
+    font-size:2rem;
+}
 `
 export const Item1 = styled.div`
     margin-top:10px;
