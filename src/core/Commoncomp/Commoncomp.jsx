@@ -1,7 +1,7 @@
 import React from 'react'
 import { Commoncompcss ,Heading, Stylecss } from './Commoncom.style'
 import Itembox from './../Itembox/Itembox'
-const Commoncomp = ({data,text}) => {
+const Commoncomp = ({data,text,index=20}) => {
 console.log(text);
   return (
     <Heading>
@@ -14,7 +14,7 @@ console.log(text);
       </Stylecss>
         
 <Commoncompcss>
-{data.filter((i,id)=>id<=20).map((item,idx)=>
+{data.filter((i,id)=>id<=index && id>=(index-20)).map((item,idx)=>
       // <img src={`${item.addImageLink}`} alt="" />
       <Itembox data={item} text={"ADD TO CART"}/>
      )}

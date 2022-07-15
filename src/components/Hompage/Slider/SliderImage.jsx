@@ -4,6 +4,9 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import {getAdddata, getNewArrivalsProducts} from './../../../redux/HomePage/HomePage.action'
 import { useDispatch, useSelector } from "react-redux";
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+
 const SliderImage = () => {
   let dispatch = useDispatch();
   useEffect(()=>{
@@ -24,9 +27,9 @@ const SliderImage = () => {
     
   return (
     <Slider {...settings}>
-      {Addata.map((item,idx)=>
+      {Addata.length?Addata.map((item,idx)=>
       <img src={`${item.addImageLink}`} alt="" />
-     )}
+     ):<hi>hii</hi>}
 
     </Slider>
 
