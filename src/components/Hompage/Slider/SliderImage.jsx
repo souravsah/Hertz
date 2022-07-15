@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React,{useEffect,Fragment} from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -26,12 +26,18 @@ const SliderImage = () => {
       };
     
   return (
-    <Slider {...settings}>
-      {Addata.length?Addata.map((item,idx)=>
-      <img src={`${item.addImageLink}`} alt="" />
-     ):<hi>hii</hi>}
+  <Fragment>
+{
+  Addata.length?<Slider {...settings}>
+  {Addata.map((item,idx)=>
+  <img src={`${item.addImageLink}`} alt="" />
+ )}
 
-    </Slider>
+</Slider>
+:<Skeleton height={350}/>
+}
+  
+  </Fragment>
 
   )
 }
