@@ -14,13 +14,14 @@ import LoginPage from './pages/LoginPage/LoginPage';
 import SignupPage from './pages/SignupPage/SignupPage';
 import Forgotpassword from './core/ForgotPassword/Forgotpassword';
 import Forgotpasswordpage from './pages/ForgotPasswordPage.jsx/Forgotpasswordpage';
-import Cart from './pages/Cart/Cart';
+// import Cart from './pages/Cart/Cart';
 import Wishlist from './pages/Wishlist/Wishlist';
 import MenPage from './components/ShopPage/MenPage/MenPage';
 import WomenPage from './components/ShopPage/WomenPage/WomenPage';
 import KidsPage from './components/ShopPage/KidsPage/KidsPage';
 import BeautyPage from './components/ShopPage/BeautyPage/BeautyPage'
 import SearchPage from './components/SearchPage/SearchPage'
+import Cartsub from './pages/Cart/Cartsub';
 // import { Searchbar } from './core/Navbar/Navbar.style';
 const App = () => {
   return (
@@ -33,7 +34,7 @@ const App = () => {
       <Route  path="/login" element={<LoginPage/>}/>
       <Route  path="/signup" element={<SignupPage/>}/>
       <Route  path="/forgotpassword" element={<Forgotpasswordpage/>}/>
-      <Route  path="/cart" element={<Cart/>}/>
+      <Route  path="/cart" element={<Cartsub/>}/>
       <Route  path="/wishlist" element={<Wishlist/>}/>
       <Route path="/shop" element={<SearchPage/>}/>
       <Route  path="/shop/men" element={<MenPage/>}/>
