@@ -32,5 +32,6 @@ grid-gap:10px;
 }
 @media(max-width:462px){
     grid-template-columns: auto ;
+    margin-left:1rem;
 }
 `
