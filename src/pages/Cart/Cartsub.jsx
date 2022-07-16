@@ -4,7 +4,7 @@ import Layout from '../../Layout/Layout'
 const Cartsub = () => {
   return (
     <Layout>
-<Cart/>
+    <Cart/>
     </Layout>
     
   )

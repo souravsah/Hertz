@@ -1,4 +1,4 @@
-import { CART_DATA_FAILURE, CART_DATA_SUCCESS } from "./Cart.types";
+import { CART_DATA_FAILURE, CART_DATA_SUCCESS, CART_DELETE_FAILURE, CART_DELETE_SUCCESS } from "./Cart.types";
 import axios from "axios";
 import jwt_decode from 'jwt-decode'
 const BASE_URL ='https://commerce3.herokuapp.com';
@@ -22,6 +22,27 @@ export const getCartdata = () => async (dispatch) =>
     } catch (error) {
         dispatch({
             type:CART_DATA_FAILURE
+        })
+    }
+}
+
+export const deletecartdata = (id) => async (dispatch) =>
+{
+    try {
+        
+
+        const data = await axios.delete(`${BASE_URL}/api/v1/cart/${id}`,{
+            'headers':{
+                'Authorization':`Bearer ${localStorage.getItem('jwt')}`
+            }
+        })
+        console.log(data);
+        dispatch({
+            type:CART_DELETE_SUCCESS,
+        })
+    } catch (error) {
+        dispatch({
+            type:CART_DELETE_FAILURE
         })
     }
 }

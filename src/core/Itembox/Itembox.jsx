@@ -4,6 +4,7 @@ import { AiFillHeart ,AiFillDelete} from 'react-icons/ai';
 import { BsFillBagCheckFill } from 'react-icons/bs';
 import { useDispatch } from 'react-redux';
 import { addtocart ,deleteWishlistdata} from '../../redux/WishlistPage/WishlistPage.action';
+import { getCartdata } from '../../redux/CartPage/Cart.actions';
 
 const Itembox = ({data,text}) => {
   const dispatch = useDispatch()
@@ -16,6 +17,10 @@ const Itembox = ({data,text}) => {
 const handleDelete = (id) =>{
 console.log(id);
 dispatch(deleteWishlistdata(id))
+}
+const handleCart = (id) =>{
+  dispatch(getCartdata(id))
+  alert('Added to Cart')
 }
   return (
     <Fragment>
@@ -31,7 +36,9 @@ dispatch(deleteWishlistdata(id))
                 </span>
               }
             
-            <span>
+            <span onClick={()=>{
+              handleCart(data._id)
+            }}>
               <BsFillBagCheckFill/>
             </span>
             </Cart>

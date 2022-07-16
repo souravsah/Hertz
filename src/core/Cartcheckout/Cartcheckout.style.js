@@ -34,5 +34,8 @@ p{
 h3{
     margin:9px 0;
 }
+`
 
+export const Crosscss = styled.span`
+cursor:pointer;
 `
