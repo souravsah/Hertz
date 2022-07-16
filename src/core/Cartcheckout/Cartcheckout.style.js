@@ -4,6 +4,9 @@ export const Cartcss = styled.div`
 display:flex;
 background-color:#ccc;
 width:45vw;
+@media(max-width:857px){
+    width:100vw;
+}
 // @media(max-width:875px){
     // width:100vw;
     // display:flex;
