@@ -12,7 +12,7 @@ const Wishlistsub2 = () => {
     <Wishlistcss>
     <div>
       <h1>PLEASE LOGIN</h1>
-      <h3>Login to view items in your wishlist</h3>
+      <h3>Login in to get access</h3>
       {/* <img src={img} alt="" /><br/> */}
       <button onClick={handleClick}>LOGIN</button>
     </div>

@@ -16,6 +16,9 @@ const Cart = () => {
   },[])
   // setcartdata([...cart1])
   console.log(cartData)
+  const handleButton = () =>{
+    alert('Order Placed...')
+  }
   return (
     <Second>
 <Unique>
@@ -57,7 +60,7 @@ const Cart = () => {
                       return acc+=curr.productId.pPrice
                   },0))}</h3>
         </li>
-        <Buttoncss>PLACE ORDER</Buttoncss>
+        <Buttoncss onClick={handleButton}>PLACE ORDER</Buttoncss>
       </ul>
     </Paymentcss>
     </Second>
