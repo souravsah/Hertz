@@ -2,10 +2,14 @@ import styled from 'styled-components'
 
 export const Wishlistcss = styled.div`
 // width:100vw;
-// height:100vh;
-
+height:100vh;
+position:relative;
 text-align:center;
 div{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
     margin-top:7.3rem;
     h1{
         font-size:1.8rem;

@@ -1,10 +1,12 @@
-import { CART_DATA_FAILURE, CART_DATA_SUCCESS, CART_DELETE_FAILURE, CART_DELETE_SUCCESS } from "./Cart.types";
+import { CART_DATA_FAILURE, CART_DATA_SUCCESS, CART_DELETE_FAILURE, CART_DELETE_SUCCESS, CART_POST_SUCCESS } from "./Cart.types";
 
 const initialState={
     cartData:[],
     cartDataLoading:true,
     cartdeletemsg:"",
-    cartdeleteloading:true
+    cartdeleteloading:true,
+    addtowishlistmsg:"",
+    addtowishlistloading:true,
 }
 
 export default function(state=initialState,action){
@@ -18,6 +20,8 @@ export default function(state=initialState,action){
             return {...state,cartdeletemsg:"Delete Successfull",cartdeleteloading:false}
         case CART_DELETE_FAILURE:
             return {...state,cartdeletemsg:"",cartdeleteloading:false}    
+            case CART_POST_SUCCESS:
+                return {...state,addtowishlistloading:false,addtowishlistmsg:'Added to wishlist'}
         default:
             return state;
 }

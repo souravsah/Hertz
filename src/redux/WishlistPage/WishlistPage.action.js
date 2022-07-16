@@ -27,7 +27,7 @@ export const getWishlistdata = () => async (dispatch) =>
 }
 
 
-export const addtocart = ({productId}) => async (dispatch) =>
+export const addtowishlist = ({productId}) => async (dispatch) =>
 {
     try {
 

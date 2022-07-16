@@ -1,17 +1,20 @@
 import React from 'react'
+import { useState } from 'react'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Cartcheckout from '../../core/Cartcheckout/Cartcheckout'
 import { getCartdata } from '../../redux/CartPage/Cart.actions'
 import {  Paymentcss, Second, Unique,Buttoncss } from './Cart.style'
-
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 const Cart = () => {
   let dispatch = useDispatch()
-
+  // let [cartData,setcartdata]=useState([]);
   let cartData = useSelector((state)=>state.CartReducer.cartData.data) || []
   useEffect(()=>{
     dispatch(getCartdata())
   },[])
+  // setcartdata([...cart1])
   console.log(cartData)
   return (
     <Second>
@@ -23,7 +26,7 @@ const Cart = () => {
       </div>
       <div>
       {
-        cartData.length?cartData.map((item,idx)=><Cartcheckout data={item}/>):<h1>Loading</h1>
+        cartData.length?cartData.map((item,idx)=><Cartcheckout data={item}/>):new Array(9).fill(21).map(()=><Skeleton width={500} height={150} />)
       }
       </div>
  
