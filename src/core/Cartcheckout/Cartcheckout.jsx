@@ -9,7 +9,7 @@ const Cartcheckout = ({data}) => {
   let dispatch = useDispatch()
   const handleClick = (id) =>{
     console.log(id);
-    dispatch(deletecartdata())
+    dispatch(deletecartdata(id))
 
     
   }
