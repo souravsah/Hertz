@@ -9,23 +9,21 @@ import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 const Cart = () => {
   let dispatch = useDispatch()
-  // let [cartData,setcartdata]=useState([]);
   let cartData = useSelector((state)=>state.CartReducer.cartData.data) || []
   useEffect(()=>{
     dispatch(getCartdata())
   },[])
-  // setcartdata([...cart1])
   console.log(cartData)
   const handleButton = () =>{
     alert('Order Placed...')
   }
+
   return (
-    <Second>
+    <>
+        <Second>
 <Unique>
       <div>
-    <h3>{`You have got ${cartData.length} item for Rs.${cartData.reduce((acc,curr)=>{
-                        return acc+=curr.productId.pPrice
-                    },0)}`}</h3>
+    <h3>{`You have got ${cartData.length} item for`} </h3>
       </div>
       <div>
       {
@@ -38,9 +36,7 @@ const Cart = () => {
       <ul>
         <li>
           <h3>Total MRP</h3>
-          <h3>Rs.{cartData.reduce((acc,curr)=>{
-                        return acc+=curr.productId.pPrice
-                    },0)}</h3>
+          <h3>Rs.</h3>
         </li>
         <li>
           <h3>Discount on MRP</h3>
@@ -64,8 +60,9 @@ const Cart = () => {
       </ul>
     </Paymentcss>
     </Second>
-    
-  
+
+    </>
+     
   )
 }
 

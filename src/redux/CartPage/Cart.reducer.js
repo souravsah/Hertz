@@ -20,8 +20,8 @@ export default function(state=initialState,action){
             return {...state,cartdeletemsg:"Delete Successfull",cartdeleteloading:false}
         case CART_DELETE_FAILURE:
             return {...state,cartdeletemsg:"",cartdeleteloading:false}    
-            case CART_POST_SUCCESS:
-                return {...state,addtowishlistloading:false,addtowishlistmsg:'Added to wishlist'}
+        case CART_POST_SUCCESS:
+            return {...state,addtowishlistloading:false,addtowishlistmsg:'Added to wishlist'}
         default:
             return state;
 }

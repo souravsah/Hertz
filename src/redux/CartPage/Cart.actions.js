@@ -19,8 +19,10 @@ export const getCartdata = () => async (dispatch) =>
             payload:data.data.data
         })
     } catch (error) {
+        console.log(error)
         dispatch({
             type:CART_DATA_FAILURE
+            
         })
     }
 }
