@@ -39,7 +39,7 @@ const handleCart = (id) =>{
               }
             
             <span onClick={()=>{
-              handleCart(data._id)
+              handleCart(data.productId?data.productId._id:data._id)
             }}>
               <BsFillBagCheckFill/>
             </span>
