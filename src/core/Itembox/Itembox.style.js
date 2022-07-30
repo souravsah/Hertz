@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Item =styled.div`
 width:230px;
+margin:12px;
 height:350px;
 padding:0px 6px;
 border:1px solid #ccc;
@@ -15,6 +16,11 @@ div:nth-child(2){
         margin:3px 0px;
     }
 }
+&:hover{
+    box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
+    transform: translateY(-1vmax);
+    cursor:pointer;
+}
 `
 export const Cart = styled.h3`
 position:absolute;
@@ -22,7 +28,6 @@ width:90px;
 display:flex;
 justify-content:space-between;
 height:40px;
-
 bottom:16px;
 padding:10px 12px;
 background-color:#ccc;
